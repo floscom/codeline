@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "codeline",
+  "description": "CODELINE.co Website",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Flo Narr <flo@codeline.co>",
   "dependencies": {
     "gatsby": "^1.9.73",
     "gatsby-link": "^1.6.22",
