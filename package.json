@@ -10,6 +10,7 @@
     "gatsby-source-filesystem": "^1.5.5",
     "gatsby-transformer-remark": "^1.7.18",
     "jquery": "^3.2.1",
+    "material-ui": "next",
     "react-fullpage": "^0.1.18"
   },
   "keywords": [

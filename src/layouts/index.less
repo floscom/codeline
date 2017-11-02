@@ -18,7 +18,10 @@ body {
 }
 
 .text-center {
-    text-align: center
+    text-align: center;
+    li {
+        text-align: center;
+    }
 }
 
 .text-right {
@@ -40,6 +43,24 @@ body {
     }
 }
 
+h2 {
+    margin: 0;
+    padding: 0;
+}
+
+@180deg: 180deg;
+.rotate180deg {
+    -ms-transform: rotate(@180deg); /* IE 9 */
+    -webkit-transform: rotate(@180deg); /* Chrome, Safari, Opera */
+    transform: rotate(@180deg);
+}
+
+@90deg: 90deg;
+.rotate90deg {
+    -ms-transform: rotate(@90deg); /* IE 9 */
+    -webkit-transform: rotate(@90deg); /* Chrome, Safari, Opera */
+    transform: rotate(@90deg);
+}
 
 .rowFlex {
     display: flex;
@@ -85,6 +106,12 @@ body {
 
 }
 
+.logo {
+    @media(max-width: @screen-sm-max){
+        padding: 40px;
+    }
+}
+
 .top {
     .gradient-radial(@light, @dark);
 }
@@ -97,11 +124,34 @@ body {
         padding: 10px
     }
     ul {
-        font-size: 12px;
-        line-height: 18px
+        font-size: 14px;
+        line-height: 22px
     }
     .icon {
         padding: 0
+    }
+
+    @media(min-width: @screen-sm-min){
+        .bb {
+            //border-bottom: solid 3px #000;
+        }
+        .bl {
+            border-left: solid 3px #000;
+            padding-left: 30px;
+        }
+    }
+
+    .hero-text {
+        border-bottom: solid 3px @red;
+        padding-bottom: 2px
+    }
+    h2 {
+        border-top: solid 4px #000;
+        border-bottom: solid 4px #000;
+        margin-bottom: 20px;
+        font-size: 22.5px;
+        padding: 8px;
+        .text-center;
     }
 }
 
@@ -164,14 +214,6 @@ h1 {
     }
 }
 
-h2 {
-    padding: 0;
-    margin: 0;
-    font-weight: normal;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-}
-
 @-webkit-keyframes scroll {
     0% {
         opacity: 1;
@@ -200,9 +242,19 @@ h2 {
         background: @gray;
     }
     padding: 40px;
+    @media(max-width: @screen-sm-max){
+        padding: 0px;
+    }
     color: #000;
     .skill {
         padding: 20px;
+    }
+    h2 {
+        padding: 0;
+        margin: 0;
+        font-weight: normal;
+        letter-spacing: 4px;
+        text-transform: uppercase;
     }
 }
 
