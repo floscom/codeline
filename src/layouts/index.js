@@ -11,16 +11,15 @@ const Header = () => (
 )
 
 const TemplateWrapper = ({ children }) => (
-  <div>
-    <Helmet>
-        <title>My Title</title>
-        <link href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans:400,800" rel="stylesheet" />
-    </Helmet>
-    <Header />
     <div>
-      {children()}
+        <Helmet>
+            <title>CODELINE.co</title>
+        </Helmet>
+        <Header />
+        <div>
+            {children()}
+        </div>
     </div>
-  </div>
 )
 
 TemplateWrapper.propTypes = {
