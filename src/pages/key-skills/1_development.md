@@ -3,4 +3,4 @@ title: Software Development
 col: 6
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Ansprechende Software ist meine Obsession, egal ob Desktop, Mobile oder jegliches sonstige Endgerät. Als Softwareentwickler mit mehr als 10 Jahren Erfahrung in den verschiedensten Bereichen der Entwicklung hab ich mir ein Fundament an Wissen geschaffen, welches ich für den Erfolg deiner Software bestens einsetzen kann.

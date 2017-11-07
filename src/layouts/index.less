@@ -35,7 +35,11 @@ body {
 }
 
 .broad {
-    max-width: 1000px
+    max-width: 1000px;
+    background: #fff;
+    @media(min-width: @screen-sm-max){
+        padding-bottom: 50px;
+    }
 }
 
 .text-big {
@@ -76,6 +80,17 @@ h2 {
 @red: #e74c3c;
 @gray: #ecf0f1;
 
+@bg-red: rgba(231, 76, 60,0.7);
+@bg-gray: rgba(44, 62, 80, 0.7);
+
+div {
+    p {
+        &.bl:first-child {
+            margin-top: 0
+        }
+    }
+}
+
 .gradient-linear(@first, @second) {
     background: gray;
     background: -webkit-linear-gradient(@first, @second);
@@ -94,16 +109,50 @@ h2 {
 
 .flexView {
 
-    height: 100vh;
+    min-height: 100vh;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
+    color: #fff;
+
+    #bgvid {
+        z-index: 1;
+        border-radius: 20px;
+        width: 100%;
+    }
+
+    .video-container {
+        position: absolute;
+        padding: 0;
+        line-height: 0;
+        z-index: -1;
+        .overlay {
+            position: absolute;
+            background: @bg-gray;
+            z-index: 10;
+            border-radius: 20px;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
     .mainFlex {
         flex-grow: 2;
         display: flex;
         align-items: center;
+    }
+
+    @media(max-width: @screen-sm-max){
+        min-height: 0;
+        #bgvid, .video-container .overlay {
+            border-radius: 0
+        }
+        #bgvid {
+            width: inherit;
+        }
     }
 
 }
@@ -116,12 +165,14 @@ h2 {
 
 .top {
     .gradient-radial(@light, @dark);
+    min-height: 100vh;
 }
 
 .hero {
+
     font-family: 'Merriweather', serif;
     font-size: 18px;
-    height: 100vh;
+
     div, ul {
         padding: 10px
     }
@@ -129,6 +180,7 @@ h2 {
         font-size: 14px;
         line-height: 22px
     }
+
     .icon {
         padding: 0
     }

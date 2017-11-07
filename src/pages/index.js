@@ -3,10 +3,11 @@ import $ from 'jquery'
 import Link from 'gatsby-link'
 
 import logo from '../assets/codeline-white-think-big@0.5x.png';
-import expert from '../assets/expert-30px.png';
-import bracket from '../assets/bracket-100px.png';
+import expert from '../assets/w-expert-30px.png';
+import bracket from '../assets/w-bracket-100px.png';
 import _keyskills from '../assets/keyskills-100px.png';
 import _more from '../assets/more-100px.png';
+import _video from '../assets/video_preview_h264.mp4';
 
 import Skill from '../Components/Skill';
 
@@ -50,6 +51,14 @@ const IndexPage = ({ data }) => {
         </div>
 
         <div className="flexView hero">
+
+            <div className="video-container">
+                <div className="overlay"></div>
+                <video poster={_video} id="bgvid" playsInline autoPlay muted loop>
+                    <source src={_video} type="video/mp4" />
+                </video>
+            </div>
+
             <div className="hidden-xs mainFlex rowFlex">
                 <ul>
                     <li>Develop</li>
@@ -84,8 +93,13 @@ const IndexPage = ({ data }) => {
                 <div className="col-sm-6 text-big bb">
                     Entscheidend<br/>für deinen <span className="hero-text">Erfolg</span><br />sind deine <span className="hero-text">Handlungen</span>!
                 </div>
-                <div className="col-sm-6 bl">
-                    Ansprechendes Design ist schön und gut. Für gelungene Kommunikation braucht es aber mehr. Als Multi-Channel-Werbeagentur mit mehr als 15 Jahren Erfahrung verbinden wir unseren Anspruch an gehobenes Design mit fundiertem Know-how für alle Kanäle und bieten Ihnen Online- und Offline Marketing-Konzepte, die alles abdecken, was Werbung zu bieten hat. Von der Kreation bis hin zur Positionierung Ihrer Marke.
+                <div className="col-sm-6">
+                    <p className="bl">
+                        Ansprechendes Design ist schön und gut. Für gelungene Kommunikation braucht es aber mehr. Als Multi-Channel-Werbeagentur mit mehr als 15 Jahren Erfahrung verbinden wir unseren Anspruch an gehobenes Design mit fundiertem Know-how für alle Kanäle und bieten Ihnen Online- und Offline Marketing-Konzepte, die alles abdecken, was Werbung zu bieten hat. Von der Kreation bis hin zur Positionierung Ihrer Marke.
+                    </p>
+                    <p className="bl">
+                        lorem
+                    </p>
                 </div>
             </div>
         </div>
@@ -117,11 +131,19 @@ const IndexPage = ({ data }) => {
         </div>
 
         <div className="container" style={{padding: "50px"}}>
-            <TextField
-                label="With placeholder"
-                placeholder="Placeholder"
-                margin="normal"
-            />
+            <div className="row">
+                <div className="col-sm-6">
+                    test
+                </div>
+                <div className="col-sm-6">
+                    <TextField
+                        label="With placeholder"
+                        placeholder="Placeholder"
+                        margin="normal"
+                    />
+                </div>
+            </div>
+
         </div>
 
     </div>
