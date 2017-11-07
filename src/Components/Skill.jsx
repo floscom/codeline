@@ -18,8 +18,13 @@ export default class Skill extends Component {
 
         return(
             <div className={"col-xs-12 col-sm-"+col+" skill color"+number}>
-                <h2>{title}</h2>
-                <p>{excerpt}</p>
+                <div className="row">
+                    <div className="col-xs-2">icon</div>
+                    <div className="col-xs-10">
+                        <h2>{title}</h2>
+                        <p>{excerpt}</p>
+                    </div>
+                </div>
             </div>
         )
     }

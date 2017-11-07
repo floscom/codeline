@@ -11,7 +11,7 @@ import _video from '../assets/video_preview_h264.mp4';
 
 import Skill from '../Components/Skill';
 
-import TextField from 'material-ui/TextField';
+import RequestForm from '../Components/RequestForm';
 
 // import {SectionsContainer, Section, ScrollToTopOnMount} from 'react-fullpage';
 
@@ -130,6 +130,7 @@ const IndexPage = ({ data }) => {
             </div>
         </div>
 
+<<<<<<< HEAD
         <div className="container" style={{padding: "50px"}}>
             <div className="row">
                 <div className="col-sm-6">
@@ -144,6 +145,25 @@ const IndexPage = ({ data }) => {
                 </div>
             </div>
 
+=======
+        <div className="container contact">
+            <div className="row">
+                <div className="col-xs-12 col-md-4">
+                    <h2>Kontakt</h2>
+                    <p>
+                        <b>CODELINE.co</b><br />
+                        <b>Flo</b> Narr<br />
+                        Ramsau 442<br />
+                        A-6284 Ramsau<br />
+                    </p>
+                    <p>
+                        UID: AT-U69098889
+                    </p>
+                    <hr className="visible-xs visible-sm" />
+                </div>
+                <div className="col-xs-12 col-md-8"><RequestForm /></div>
+            </div>
+>>>>>>> a20f1b13beec39504416637cd624767666c271da
         </div>
 
     </div>
@@ -159,6 +179,7 @@ export const query = graphql`
                     frontmatter {
                         title
                         col
+                        icon
                     }
                     fields {
                         slug

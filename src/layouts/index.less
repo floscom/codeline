@@ -26,6 +26,21 @@ body {
     }
 }
 
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form {
+    .row {
+        align-items: center;
+    }
+    hr {
+        margin-top: 0;
+        margin-bottom: -30px;
+    }
+}
+
 .text-right {
     text-align: right
 }
@@ -218,7 +233,7 @@ ul {
 
 .scroll {
     //padding: 50px
-    height: 90px
+    height: 130px;
 }
 
 .icon-scroll {
@@ -295,8 +310,8 @@ h1 {
     &.more {
         background: @gray;
     }
-    padding: 40px;
-    @media(max-width: @screen-sm-max){
+    padding: 40px 0;
+    @media(max-width: @screen-sm-min){
         padding: 0px;
     }
     color: #000;
@@ -309,6 +324,13 @@ h1 {
         font-weight: normal;
         letter-spacing: 4px;
         text-transform: uppercase;
+    }
+}
+
+.contact {
+    padding: 40px 0;
+    @media(max-width: @screen-xs-max){
+        padding: 40px;
     }
 }
 
