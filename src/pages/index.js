@@ -130,22 +130,6 @@ const IndexPage = ({ data }) => {
             </div>
         </div>
 
-<<<<<<< HEAD
-        <div className="container" style={{padding: "50px"}}>
-            <div className="row">
-                <div className="col-sm-6">
-                    test
-                </div>
-                <div className="col-sm-6">
-                    <TextField
-                        label="With placeholder"
-                        placeholder="Placeholder"
-                        margin="normal"
-                    />
-                </div>
-            </div>
-
-=======
         <div className="container contact">
             <div className="row">
                 <div className="col-xs-12 col-md-4">
@@ -163,7 +147,6 @@ const IndexPage = ({ data }) => {
                 </div>
                 <div className="col-xs-12 col-md-8"><RequestForm /></div>
             </div>
->>>>>>> a20f1b13beec39504416637cd624767666c271da
         </div>
 
     </div>
