@@ -5,24 +5,24 @@ export default class Skill extends Component {
     render() {
 
         const {
-            number, excerpt, frontmatter
+            title, text, number
         } = this.props
 
         var {
-            title, col
-        } = frontmatter
+            cols
+        } = this.props
 
-        if(col===undefined) {
-            col = 6
+        if(cols===undefined) {
+            cols = 6
         }
 
         return(
-            <div className={"col-xs-12 col-sm-"+col+" skill color"+number}>
+            <div className={"col-xs-12 col-sm-"+cols+" skill color"+number}>
                 <div className="row">
                     <div className="col-xs-2">icon</div>
                     <div className="col-xs-10">
                         <h2>{title}</h2>
-                        <p>{excerpt}</p>
+                        <p>{text.text}</p>
                     </div>
                 </div>
             </div>

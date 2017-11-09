@@ -24,21 +24,8 @@ import RequestForm from '../Components/RequestForm';
 
 const IndexPage = ({ data }) => {
 
-    const { edges: skills } = data.allMarkdownRemark;
-
-    const more = skills.filter(({node}) => {
-        if(node.fields.slug.indexOf("more")<0) {
-            return false
-        }
-        return true
-    })
-
-    const keyskills = skills.filter(({node}) => {
-        if(node.fields.slug.indexOf("more")<0) {
-            return true
-        }
-        return false
-    })
+    var skills = data.allContentfulSkillContainer.edges[0].node.skills
+    console.log("skills", skills)
 
     return (
     <div>
@@ -110,9 +97,7 @@ const IndexPage = ({ data }) => {
                     <span className="hidden">Software Entwicklung</span>
                 </h1>
                 <div className="row gray">
-                    {keyskills.map( ({ node }, key) => {
-                        return <Skill number={key + 1} {...node} />
-                    })}
+                    {skills.map( (item, k) => <Skill key={(k+1)+"keyskill"} number={k+1} {...item} />)}
                 </div>
             </div>
         </div>
@@ -123,9 +108,7 @@ const IndexPage = ({ data }) => {
                     <span className="hidden">Marketing</span>
                 </h1>
                 <div className="row red">
-                    {more.map( ({ node }, key) => {
-                        return <Skill number={key + 1} {...node} />
-                    })}
+                    more skills
                 </div>
             </div>
         </div>
@@ -155,19 +138,18 @@ const IndexPage = ({ data }) => {
 
 export const query = graphql`
     query IndexQuery {
-        allMarkdownRemark(filter: {fileAbsolutePath: {regex:"/skills/i"}}) {
-            totalCount
+        allContentfulSkillContainer {
             edges {
                 node {
-                    frontmatter {
+                    title
+                    skills {
                         title
-                        col
+                        cols
                         icon
+                        text {
+                            text
+                        }
                     }
-                    fields {
-                        slug
-                    }
-                    excerpt(pruneLength: 1000)
                 }
             }
         }
