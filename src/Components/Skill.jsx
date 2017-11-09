@@ -5,7 +5,7 @@ export default class Skill extends Component {
     render() {
 
         const {
-            title, text, number
+            title, text, number, icon
         } = this.props
 
         var {
@@ -19,8 +19,7 @@ export default class Skill extends Component {
         return(
             <div className={"col-xs-12 col-sm-"+cols+" skill color"+number}>
                 <div className="row">
-                    <div className="col-xs-2">icon</div>
-                    <div className="col-xs-10">
+                    <div className="col-xs-12">
                         <h2>{title}</h2>
                         <p>{text.text}</p>
                     </div>

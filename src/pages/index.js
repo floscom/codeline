@@ -10,6 +10,7 @@ import _more from '../assets/more-100px.png';
 import _video from '../assets/video_preview_h264.mp4';
 
 import Skill from '../Components/Skill';
+import "material-design-icons";
 
 import RequestForm from '../Components/RequestForm';
 
@@ -24,7 +25,22 @@ import RequestForm from '../Components/RequestForm';
 
 const IndexPage = ({ data }) => {
 
-    var skills = data.allContentfulSkillContainer.edges[0].node.skills
+    var skills = {
+        key: [],
+        more: []
+    }
+
+    data.allContentfulSkillContainer.edges.forEach((item) => {
+        var node = item.node
+        if(node.title === "Key Skills") {
+            console.log("node.skills", node.skills)
+            skills.key = node.skills
+        }
+        if(node.title === "More Skills") {
+            skills.more = node.skills
+        }
+    })
+
     console.log("skills", skills)
 
     return (
@@ -97,7 +113,7 @@ const IndexPage = ({ data }) => {
                     <span className="hidden">Software Entwicklung</span>
                 </h1>
                 <div className="row gray">
-                    {skills.map( (item, k) => <Skill key={(k+1)+"keyskill"} number={k+1} {...item} />)}
+                    {skills.key.map( (item, k) => <Skill key={(k+1)+"moreskill"} number={k+1} {...item} />)}
                 </div>
             </div>
         </div>
@@ -108,7 +124,7 @@ const IndexPage = ({ data }) => {
                     <span className="hidden">Marketing</span>
                 </h1>
                 <div className="row red">
-                    more skills
+                    {skills.more.map( (item, k) => <Skill key={(k+1)+"keyskill"} number={k+1} {...item} />)}
                 </div>
             </div>
         </div>
@@ -145,7 +161,6 @@ export const query = graphql`
                     skills {
                         title
                         cols
-                        icon
                         text {
                             text
                         }
