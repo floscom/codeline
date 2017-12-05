@@ -21,7 +21,7 @@ export default class Skill extends Component {
                 <div className="row">
                     <div className="col-xs-12">
                         <h2>{title}</h2>
-                        <p>{text.text}</p>
+                        <div dangerouslySetInnerHTML={{__html: text.childMarkdownRemark.html}} />
                     </div>
                 </div>
             </div>

@@ -48,7 +48,7 @@ export default class RequestForm extends React.Component {
                     />
                 </CardContent>
                 <CardActions className="text-right">
-                    <Button raised fullWidth>
+                    <Button fullWidth>
                         Absenden
                     </Button>
                 </CardActions>

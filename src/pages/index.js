@@ -130,23 +130,23 @@ const IndexPage = ({ data }) => {
         </div>
 
         <div className="container contact">
-            <div className="row">
-                <div className="col-xs-12 col-md-4">
-                    <h2>Kontakt</h2>
-                    <p>
-                        <b>CODELINE.co</b><br />
-                        <b>Flo</b> Narr<br />
-                        Ramsau 442<br />
-                        A-6284 Ramsau<br />
-                    </p>
-                    <p>
-                        UID: AT-U69098889
-                    </p>
-                    <hr className="visible-xs visible-sm" />
-                </div>
-                <div className="col-xs-12 col-md-8"><RequestForm /></div>
-            </div>
+            <h2>Kontakt</h2>
+            <p>
+                <b>CODELINE.co</b><br />
+                <b>Flo</b> Narr<br />
+                Ramsau 442<br />
+                A-6284 Ramsau<br />
+            </p>
+            <p>
+                UID: AT-U69098889
+            </p>
+            <hr />
+            <RequestForm />
         </div>
+
+
+        <div className="giphy"><iframe src="https://giphy.com/embed/TNf5oSRelTeI8" width="100%" height="100%" style={{position:"absolute"}} frameBorder="0" className="giphy-embed" allowFullScreen></iframe></div>
+
 
     </div>
     )
@@ -162,7 +162,9 @@ export const query = graphql`
                         title
                         cols
                         text {
-                            text
+                            childMarkdownRemark {
+                                html
+                            }
                         }
                     }
                 }
