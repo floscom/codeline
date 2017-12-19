@@ -13,7 +13,7 @@ const Header = () => (
 const TemplateWrapper = ({ children }) => (
     <div>
         <Helmet>
-            <title>CODELINE.co</title>
+            <title>CODELINE.co / Softwareentwicklung</title>
         </Helmet>
         <Header />
         <div>

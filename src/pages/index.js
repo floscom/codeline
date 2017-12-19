@@ -5,14 +5,14 @@ import Link from 'gatsby-link'
 import logo from '../assets/codeline-white-think-big@0.5x.png';
 import expert from '../assets/w-expert-30px.png';
 import bracket from '../assets/w-bracket-100px.png';
-import _keyskills from '../assets/keyskills-100px.png';
-import _more from '../assets/more-100px.png';
+
 import _video from '../assets/video_preview_h264.mp4';
 
 import Skill from '../Components/Skill';
 import "material-design-icons";
 
 import RequestForm from '../Components/RequestForm';
+import Recommend from '../Components/Recommend';
 
 // import {SectionsContainer, Section, ScrollToTopOnMount} from 'react-fullpage';
 
@@ -41,7 +41,10 @@ const IndexPage = ({ data }) => {
         }
     })
 
-    console.log("skills", skills)
+    const recommend = data.allContentfulRecommended.edges
+    const logos = data.allContentfulGallery.edges[0].node.images
+
+    console.log("logos", logos)
 
     return (
     <div>
@@ -107,6 +110,17 @@ const IndexPage = ({ data }) => {
             </div>
         </div>
 
+        <div className="">
+            <h2 className="logo-header">
+                Ein Auszug meines <span className="hero-text">#Erfolges</span>
+            </h2>
+            <div className="logos">
+                {logos.map((item) => (
+                    <img src={item.file.url} title />
+                ))}
+            </div>
+        </div>
+
         <div className="skills">
             <div className="container">
                 <h1 className="text-center">
@@ -118,28 +132,37 @@ const IndexPage = ({ data }) => {
             </div>
         </div>
 
-        <div className="skills more">
-            <div className="container">
-                <h1 className="text-center">
-                    <span className="hidden">Marketing</span>
-                </h1>
-                <div className="row red">
-                    {skills.more.map( (item, k) => <Skill key={(k+1)+"keyskill"} number={k+1} {...item} />)}
-                </div>
+        <div className="hidden-xs">
+            <h2 className="recommend-header">Interessantes aus der <span className="hero-text">#Techwelt</span></h2>
+            <div className="recommend-list">
+                {recommend.map((item) => <Recommend {...item} />)}
             </div>
         </div>
 
         <div className="container contact">
-            <h2>Kontakt</h2>
-            <p>
-                <b>CODELINE.co</b><br />
-                <b>Flo</b> Narr<br />
-                Ramsau 442<br />
-                A-6284 Ramsau<br />
-            </p>
-            <p>
-                UID: AT-U69098889
-            </p>
+            <div className="row">
+                <div className="col-sm-6">
+                    <h2>Kontakt</h2>
+                    <p>
+                        <b>CODELINE.co</b><br />
+                        <b>Flo</b> Narr<br />
+                        Ramsau 442<br />
+                        A-6284 Ramsau<br />
+                        <a href="mailto:flo@codeline.co">flo@codeline.co</a>
+                    </p>
+                    <p>
+                        UID: AT-U69098889
+                    </p>
+                </div>
+                <div className="col-sm-6 text-right">
+                    <p><b>Social Media</b></p>
+                    <p>
+                        <a href="https://facebook.com/codeline.co" target="_blank">Facebook</a><br />
+                        <a href="https://twitter.com/codelineco" target="_blank">Twitter</a><br />
+                        <a href="https://medium.com/@flonarr" target="_blank">Medium.com</a>
+                    </p>
+                </div>
+            </div>
             <hr />
             <RequestForm />
         </div>
@@ -165,6 +188,37 @@ export const query = graphql`
                             childMarkdownRemark {
                                 html
                             }
+                        }
+                    }
+                }
+            }
+        }
+        allContentfulRecommended(limit: 3, sort: {fields: [createdAt], order: DESC}) {
+            edges {
+                node {
+                    title
+                    childContentfulRecommendedTagsTextNode {
+                        tags
+                    }
+      	            childContentfulRecommendedImageTextNode {
+      	                image
+      	            }
+                    childContentfulRecommendedLinkTextNode {
+                        link
+                    }
+                }
+            }
+        }
+        allContentfulGallery {
+            edges {
+                node {
+                    id
+                    title
+                    images {
+                        file {
+                            url
+                            fileName
+                            contentType
                         }
                     }
                 }
