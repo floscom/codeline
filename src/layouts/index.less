@@ -112,6 +112,13 @@ div {
     }
 }
 
+a {
+    color: @dark;
+    &:hover {
+        color: @dark;
+    }
+}
+
 .gradient-linear(@first, @second) {
     background: gray;
     background: -webkit-linear-gradient(@first, @second);
@@ -346,9 +353,34 @@ h1 {
 }
 
 .contact {
-    padding: 40px 0;
+    padding: 0;
     @media(max-width: @screen-xs-max){
         padding: 20px;
+    }
+    .contact-meta {
+        a {
+            padding: 20px;
+            margin: 0 0 20px;
+            background: @gray;
+            display: block;
+            text-decoration: none;
+            font-size: 20px;
+            font-family: 'Merriweather', serif;
+            color: @light;
+            border-radius: 5px;
+            &:hover {
+                text-decoration: none;
+                background: @light;
+                color: @gray;
+                text-transform: uppercase;
+                .info {
+                    display: none;
+                }
+                .hidden {
+                    display: block !important;
+                }
+            }
+        }
     }
 }
 
@@ -399,7 +431,7 @@ h1 {
     margin-bottom: 20px;
 }
 
-.recommend-header, .logo-header {
+.recommend-header, .logo-header, .contact-header {
     font-family: 'Merriweather', serif;
     font-size: 24px;
     text-align: center;

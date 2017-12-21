@@ -132,29 +132,22 @@ const IndexPage = ({ data }) => {
             </div>
         </div>
 
-        <div className="hidden-xs">
-            <h2 className="recommend-header">Interessantes aus der <span className="hero-text">#Techwelt</span></h2>
-            <div className="recommend-list">
-                {recommend.map((item) => <Recommend {...item} />)}
-            </div>
-        </div>
-
         <div className="container contact">
+            <h2 className="contact-header">Kontakt</h2>
+            <hr />
             <div className="row">
-                <div className="col-sm-6">
-                    <h2>Kontakt</h2>
+                <div className="col-xs-6">
                     <p>
                         <b>CODELINE.co</b><br />
                         <b>Flo</b> Narr<br />
                         Ramsau 442<br />
-                        A-6284 Ramsau<br />
-                        <a href="mailto:flo@codeline.co">flo@codeline.co</a>
+                        A-6284 Ramsau
                     </p>
                     <p>
                         UID: AT-U69098889
                     </p>
                 </div>
-                <div className="col-sm-6 text-right">
+                <div className="col-xs-6 text-right">
                     <p><b>Social Media</b></p>
                     <p>
                         <a href="https://facebook.com/codeline.co" target="_blank">Facebook</a><br />
@@ -164,12 +157,21 @@ const IndexPage = ({ data }) => {
                 </div>
             </div>
             <hr />
-            <RequestForm />
+            <div className="row contact-meta">
+                <div className="col-xs-12 col-sm-6 text-center">
+                    <a href="tel:00436769710112">
+                        <span className="info">+43 676 971 01 12</span>
+                        <span className="hidden">Anrufen</span>
+                    </a>
+                </div>
+                <div className="col-xs-12 col-sm-6 text-center">
+                    <a href="mailto:flo@codeline.co">
+                        <span className="info">flo@codeline.co</span>
+                        <span className="hidden">Schreiben</span>
+                    </a>
+                </div>
+            </div>
         </div>
-
-
-        <div className="giphy"><iframe src="https://giphy.com/embed/TNf5oSRelTeI8" width="100%" height="100%" style={{position:"absolute"}} frameBorder="0" className="giphy-embed" allowFullScreen></iframe></div>
-
 
     </div>
     )
