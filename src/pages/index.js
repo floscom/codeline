@@ -41,10 +41,11 @@ const IndexPage = ({ data }) => {
         }
     })
 
-    const recommend = data.allContentfulRecommended.edges
+    console.log("data", data)
+    //const recommend = data.allContentfulRecommended.edges
     const logos = data.allContentfulGallery.edges[0].node.images
 
-    console.log("logos", logos)
+    //console.log("logos", logos)
 
     return (
     <div>
@@ -191,22 +192,6 @@ export const query = graphql`
                                 html
                             }
                         }
-                    }
-                }
-            }
-        }
-        allContentfulRecommended(limit: 3, sort: {fields: [createdAt], order: DESC}) {
-            edges {
-                node {
-                    title
-                    childContentfulRecommendedTagsTextNode {
-                        tags
-                    }
-      	            childContentfulRecommendedImageTextNode {
-      	                image
-      	            }
-                    childContentfulRecommendedLinkTextNode {
-                        link
                     }
                 }
             }
