@@ -57,7 +57,7 @@ const IndexPage = ({ data }) => {
             </div>
         </div>
 
-        <div className="flexView hero">
+        <div className="flexView hero video-hero">
 
             <div className="video-container">
                 <div className="overlay"></div>
@@ -137,7 +137,7 @@ const IndexPage = ({ data }) => {
             <h2 className="contact-header">Kontakt</h2>
             <hr />
             <div className="row">
-                <div className="col-xs-6">
+                <div className="col-xs-12">
                     <p>
                         <b>CODELINE.co</b><br />
                         <b>Flo</b> Narr<br />
@@ -148,7 +148,7 @@ const IndexPage = ({ data }) => {
                         UID: AT-U69098889
                     </p>
                 </div>
-                <div className="col-xs-6 text-right">
+                <div className="col-xs-12 text-right">
                     <p><b>Social Media</b></p>
                     <p>
                         <a href="https://facebook.com/codeline.co" target="_blank">Facebook</a><br />
