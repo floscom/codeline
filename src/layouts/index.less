@@ -73,6 +73,10 @@ body {
     }
 }
 
+.text-small {
+    font-size: 10px;
+}
+
 h2 {
     margin: 0;
     padding: 0;
@@ -136,6 +140,14 @@ a {
     background: -o-radial-gradient(@first, @second);
     background: -moz-radial-gradient(@first, @second);
     background: radial-gradient(@first, @second);
+}
+
+.maxWidth-200px {
+    max-width: 200px;
+    @media(max-width: @screen-xs-max){
+        .img-rounded;
+        max-width: 100%;
+    }
 }
 
 .flexView {
