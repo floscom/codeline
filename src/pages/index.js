@@ -6,7 +6,7 @@ import logo from '../assets/codeline-white-think-big@0.5x.png';
 import expert from '../assets/w-expert-30px.png';
 import bracket from '../assets/w-bracket-100px.png';
 
-import _video from '../assets/video_preview_h264.mp4';
+import _video from '../assets/typing.mp4';
 
 import Skill from '../Components/Skill';
 import "material-design-icons";
@@ -102,10 +102,13 @@ const IndexPage = ({ data }) => {
                 </div>
                 <div className="col-sm-6">
                     <p className="bl">
-                        Ansprechendes Design ist schön und gut. Für gelungene Kommunikation braucht es aber mehr. Als Multi-Channel-Werbeagentur mit mehr als 15 Jahren Erfahrung verbinden wir unseren Anspruch an gehobenes Design mit fundiertem Know-how für alle Kanäle und bieten Ihnen Online- und Offline Marketing-Konzepte, die alles abdecken, was Werbung zu bieten hat. Von der Kreation bis hin zur Positionierung Ihrer Marke.
+                        Beratung, Konzeption, UserInterface & Entwicklung.
                     </p>
                     <p className="bl">
-                        lorem
+                        Schnelle Rückmeldung sowie hohe Geschwindigkeit und Genauigkeit bei der Entwicklung von Lösungen zur Unterstützung deiner Geschäftsziele.
+                    </p>
+                    <p className="bl">
+                        Ich bin spezialisiert auf die Entwicklung von Mobile Apps, Betriebslösungen, Integration von Softwarelösungen und die Anbindung von Programmen an jegliche Art von Schnittstellen.
                     </p>
                 </div>
             </div>
@@ -113,13 +116,14 @@ const IndexPage = ({ data }) => {
 
         <div className="">
             <h2 className="logo-header">
-                Ein Auszug meines <span className="hero-text">#Erfolges</span>
+                Meine <span className="hero-text">#Kunden</span>
             </h2>
             <div className="logos">
                 {logos.map((item) => (
                     <img src={item.file.url} title />
                 ))}
             </div>
+            <p className="text-center">und noch weitere ...</p>
         </div>
 
         <div className="skills">
