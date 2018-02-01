@@ -104,10 +104,7 @@ const IndexPage = ({ data }) => {
                 </div>
                 <div className="col-sm-6">
                     <p className="bl">
-                        Beratung, Konzeption, UserInterface & Entwicklung.
-                    </p>
-                    <p className="bl">
-                        Schnelle Rückmeldung sowie hohe Geschwindigkeit und Genauigkeit bei der Entwicklung von Lösungen zur Unterstützung deiner Geschäftsziele.
+                        Beratung, Konzeption, UserInterface & Entwicklung!
                     </p>
                     <p className="bl">
                         Ich bin spezialisiert auf die Entwicklung von Mobile Apps, Betriebslösungen, Integration von Softwarelösungen und die Anbindung von Programmen an jegliche Art von Schnittstellen.
