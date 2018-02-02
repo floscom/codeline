@@ -100,17 +100,17 @@ const IndexPage = ({ data }) => {
         <div className="container broad hero">
             <div className="row">
                 <div className="col-sm-6 text-big bb">
-                    Entscheidend<br/>für deinen <span className="hero-text">Erfolg</span><br />sind deine <span className="hero-text">Handlungen</span>!
+                    Entscheidend<br/>für deinen Erfolg<br />sind deine Handlungen!
                 </div>
                 <div className="col-sm-6">
                     <p className="bl">
                         Beratung, Konzeption & Entwicklung!
                     </p>
                     <p className="bl">
-                        Mit mehr als <span className="hero-text">10 Jahren Erfahrung</span> in der Entwicklung von Spezialanwendungen und mit einer <span className="hero-text">ausgeprägten Software-Affinität</span> kann ich auf eine fundierte Basis und ein sehr großes Wissen in diesem Bereich zurückgreifen.
+                        Mit mehr als 10 Jahren Erfahrung in der Entwicklung von Spezialanwendungen und mit einer ausgeprägten Software-Affinität kann ich auf eine fundierte Basis und ein sehr großes Wissen in diesem Bereich zurückgreifen.
                     </p>
                     <p className="bl">
-                        Ich bin spezialisiert auf die Entwicklung <span className="hero-text">mobiler Apps (iOS & Android)</span>, Betriebslösungen und die Anbindung von Software an jegliche Art von <span className="hero-text">Schnittstellen</span>. Des Weiteren sollte ein <span className="hero-text">cloudbasiertes Hosting</span> und die Skalierung von Softwarelösungen kein Problem sein ;)
+                        Ich bin spezialisiert auf die Entwicklung mobiler Apps (iOS & Android), Betriebslösungen und die Anbindung von Software an jegliche Art von Schnittstellen. Des Weiteren sollte ein cloudbasiertes Hosting und die Skalierung von Softwarelösungen kein Problem sein ;)
                     </p>
                 </div>
             </div>
