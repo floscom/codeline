@@ -104,23 +104,30 @@ const IndexPage = ({ data }) => {
                 </div>
                 <div className="col-sm-6">
                     <p className="bl">
-                        Beratung, Konzeption, UserInterface & Entwicklung!
+                        Beratung, Konzeption & Entwicklung!
                     </p>
                     <p className="bl">
-                        Ich bin spezialisiert auf die Entwicklung von Mobile Apps, Betriebslösungen, Integration von Softwarelösungen und die Anbindung von Programmen an jegliche Art von Schnittstellen.
+                        Mit mehr als <span className="hero-text">10 Jahren Erfahrung</span> in der Entwicklung von Spezialanwendungen und mit einer <span className="hero-text">ausgeprägten Software-Affinität</span> kann ich auf eine fundierte Basis und ein sehr großes Wissen in diesem Bereich zurückgreifen.
+                    </p>
+                    <p className="bl">
+                        Ich bin spezialisiert auf die Entwicklung <span className="hero-text">mobiler Apps (iOS & Android)</span>, Betriebslösungen und die Anbindung von Software an jegliche Art von <span className="hero-text">Schnittstellen</span>. Des Weiteren sollte ein <span className="hero-text">cloudbasiertes Hosting</span> und die Skalierung von Softwarelösungen kein Problem sein ;)
                     </p>
                 </div>
             </div>
+        </div>
+        <div className="signature">
             <div className="row">
-                <div className="col-sm-6 text-right">
+                <div className="col-sm-6 text-right imageblock">
                     <img src={_floBw} className="img-circle maxWidth-200px" />
                 </div>
                 <div className="col-sm-6 text-left">
                     <p>
-                        Wie auch Hipp für seine Produkte steht, stehe ich mit meinem Namen für mein Können und meine Leistungen.
+                        Wie auch Hipp für seine Produkte steht,<br />
+                        stehe ich mit meinem Namen für mein Können <br />
+                        und meine Leistungen in der Softwareentwicklung.
                     </p>
                     <p>
-                        Bei uns in <b>Tirol</b> hat das noch Wert!
+                        Bei uns in <span className="hero-text">Tirol & Zillertal</span> hat das noch Wert!
                     </p>
                     <img src={_signature} />
                 </div>
