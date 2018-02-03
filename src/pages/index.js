@@ -107,7 +107,7 @@ const IndexPage = ({ data }) => {
                         Beratung, Konzeption & Entwicklung!
                     </p>
                     <p className="bl">
-                        Mit mehr als 10 Jahren Erfahrung in der Entwicklung von Spezialanwendungen und einer ausgeprägten Software-Affinität kann ich auf eine fundierte Wissen und ein sehr großes Netzwerk in diesem Bereich zurückgreifen.
+                        Mit mehr als 10 Jahren Erfahrung in der Entwicklung von Spezialanwendungen und einer ausgeprägten Software-Affinität kann ich auf ein fundiertes Wissen und ein sehr großes Netzwerk, in diesem Bereich, zurückgreifen.
                     </p>
                     <p className="bl">
                         Ich bin spezialisiert auf die Entwicklung mobiler Apps (iOS & Android), Betriebslösungen und die Anbindung von Software an jegliche Art von Schnittstellen. Des Weiteren sollte ein cloudbasiertes Hosting und somit die Skalierung von Softwarelösungen kein Problem sein ;)
@@ -122,9 +122,9 @@ const IndexPage = ({ data }) => {
                 </div>
                 <div className="col-sm-6 text-left">
                     <p>
-                        Wie auch Hipp für seine Produkte steht,<br />
+                        Wie auch Hipp, für seine Produkte steht,<br />
                         stehe ich mit meinem Namen für mein Können <br />
-                        und meine Leistungen in der Softwareentwicklung.
+                        und meine Leistungen im Bereich der Softwareentwicklung.
                     </p>
                     <p>
                         Bei uns in <span className="hero-text">Tirol & Zillertal</span> hat das noch Wert!
@@ -149,7 +149,7 @@ const IndexPage = ({ data }) => {
         <div className="skills">
             <div className="container">
                 <h1 className="text-center">
-                    <span className="hidden">Software Entwicklung</span>
+                    <span className="hidden">Softwareentwicklung</span>
                 </h1>
                 <div className="row gray">
                     {skills.key.map( (item, k) => <Skill key={(k+1)+"moreskill"} number={k+1} {...item} />)}
