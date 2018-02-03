@@ -458,6 +458,24 @@ h1 {
     }
 }
 
+.bigBack {
+    margin: 20px 0;
+    display: block;
+    padding: 15px 20px;
+    font-size: 20px;
+    font-family: 'Merriweather', serif;
+    background: @gray;
+    text-align: center;
+    color: @light;
+    border-radius: 5px;
+    text-transform: uppercase;
+    &:hover {
+        text-decoration: none;
+        background: @light;
+        color: @gray;
+    }
+}
+
 .generate-gray(@n, @i: 1) when (@i =< @n) {
     .color@{i} {
         background: rgba(236, 240, 241, 0.1*@i);
