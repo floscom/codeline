@@ -195,6 +195,12 @@ const IndexPage = ({ data }) => {
                 </div>
             </div>
             <hr />
+            <div className="row">
+                <div className="col-lg-12">
+                    <RequestForm />
+                </div>
+            </div>
+            <hr />
             <p className="text-right">
                 <Link to="/impress">Impressum</Link>
             </p>
