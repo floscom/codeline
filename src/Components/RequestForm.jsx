@@ -13,7 +13,7 @@ const styles = theme => ({
 class RequestForm extends React.Component {
     render() {
         return (
-            <form netlify action="/thankyou">
+            <form netlify action="/thankyou" data-netlify="true">
             <Card className="form">
                 <CardContent>
                     <div className="row">
