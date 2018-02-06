@@ -120,14 +120,12 @@ const IndexPage = ({ data }) => {
                 <div className="col-sm-6 text-right imageblock">
                     <img src={_floBw} className="img-circle maxWidth-200px" />
                 </div>
-                <div className="col-sm-6 text-left">
+                <div className="col-sm-6 text-left small">
                     <p>
-                        Wie auch Hipp, für seine Produkte steht,<br />
-                        stehe ich mit meinem Namen für mein Können <br />
-                        und meine Leistungen im Bereich der Softwareentwicklung.
+                        Wie auch DU zu deinen Leistungen und zu deinem Produkt stehst, stehe auch ich zu meinen!
                     </p>
                     <p>
-                        Bei uns in <span className="hero-text">Tirol & Zillertal</span> hat das noch Wert!
+                        Seiner Sache sicher sein ist das wichtigste, den ansonsten wird's schwer das beste und somit das profitabelste Resultat zu erziehlen...
                     </p>
                     <img src={_signature} />
                 </div>
