@@ -13,7 +13,7 @@ const styles = theme => ({
 class RequestForm extends React.Component {
     render() {
         return (
-            <form netlify action="/thankyou" data-netlify="true">
+            <form name="kontakt" netlify action="/thankyou" data-netlify="true">
             <Card className="form">
                 <CardContent>
                     <div className="row">
@@ -59,7 +59,7 @@ class RequestForm extends React.Component {
                     />
                 </CardContent>
                 <CardActions className="text-right">
-                    <Button fullWidth>
+                    <Button fullWidth type="submit">
                         Nachricht senden!
                     </Button>
                 </CardActions>
