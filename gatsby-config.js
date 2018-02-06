@@ -18,6 +18,13 @@ module.exports = {
                 accessToken: `d3bb90c2411ae015cb73d34a1ea4634a69b77b2b0e7d41a19518b13dbc600aea`,
             },
         },
-        `gatsby-transformer-remark`
+        `gatsby-transformer-remark`,
+        {
+            resolve: `gatsby-plugin-google-analytics`,
+            options: {
+                trackingId: "UA-4759182-2",
+                anonymize: true,
+            },
+        },
     ],
 }

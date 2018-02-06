@@ -35,7 +35,7 @@ const IndexPage = ({ data }) => {
     data.allContentfulSkillContainer.edges.forEach((item) => {
         var node = item.node
         if(node.title === "Key Skills") {
-            console.log("node.skills", node.skills)
+            //console.log("node.skills", node.skills)
             skills.key = node.skills
         }
         if(node.title === "More Skills") {
@@ -43,7 +43,7 @@ const IndexPage = ({ data }) => {
         }
     })
 
-    console.log("data", data)
+    //console.log("data", data)
     //const recommend = data.allContentfulRecommended.edges
     const logos = data.allContentfulGallery.edges[0].node.images
 
