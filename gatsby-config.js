@@ -19,12 +19,19 @@ module.exports = {
             },
         },
         `gatsby-transformer-remark`,
-        {
+        /*{
             resolve: `gatsby-plugin-google-analytics`,
             options: {
                 trackingId: "UA-4759182-2",
                 anonymize: true,
             },
-        },
+        },*/
+        {
+            resolve: `gatsby-plugin-google-tagmanager`,
+            options: {
+                id: "GTM-KGS2RBV",
+                includeInDevelopment: false,
+            },
+        }
     ],
 }
